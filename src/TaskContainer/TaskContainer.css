@@ -1,0 +1,6 @@
+#task-container{
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
