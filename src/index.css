@@ -30,6 +30,10 @@ body {
   color: var(--textColor);
 }
 
+.background-color {
+  background-color: var(--backgroundColor);
+}
+
 .item-background-color {
   background-color: var(--itemBackgroundColor);
 }
