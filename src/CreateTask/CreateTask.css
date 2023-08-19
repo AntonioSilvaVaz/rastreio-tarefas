@@ -25,7 +25,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
-  height: 500px;
+  height: max-content;
   padding: 25px 35px;
   border-radius: 15px;
   z-index: 1;
@@ -47,7 +47,7 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .input-container div {
@@ -65,10 +65,23 @@ input[type=text] {
 .textarea {
   width: 400px;
   height: 200px;
+  padding: 10px;
+  resize: none;
 }
 
-input[type=datetime-local]{
+input[type=datetime-local] {
   width: 200px;
+  padding: 10px;
   font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
   padding: 5px;
+}
+
+.input-container button{
+  margin: 20px auto;
+  width: 150px;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
 }
