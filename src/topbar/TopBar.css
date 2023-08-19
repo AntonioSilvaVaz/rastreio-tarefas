@@ -1,16 +1,15 @@
-#topbar{
+#topbar {
   width: 100%;
   box-sizing: border-box;
   padding: 20px;
-  background-color: black;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.icons-container{
+.icons-container {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
   font-size: 20px;
 }
