@@ -18,8 +18,6 @@ export function CreateTask() {
 
     const taskId = crypto.randomUUID();
     dispatch(createNewTask({ title, note, date, completed: false, taskId }));
-
-
     setTitle('');
     setNote('');
     setDate('');
