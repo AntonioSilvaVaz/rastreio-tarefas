@@ -21,7 +21,7 @@ export function CreateTask() {
             </div>
             <div className='input-container'>
               <div>
-                <label htmlFor="title"><h4>Title</h4></label>
+                <label htmlFor="title"><h4>Título</h4></label>
                 <input type="text" name="title" />
               </div>
               <div>
