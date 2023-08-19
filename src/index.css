@@ -1,27 +1,39 @@
-:root{
-  --textColor: white;
+:root {
   --backgroundColor: black;
+  --textColor: white;
+  --itemBackgroundColor: white;
+  --itemTextColor: black;
 }
 
-html,body, #root {
+html,
+body,
+#root {
   width: 100%;
   height: 100%;
 }
 
-body{
+body {
   background-color: var(--backgroundColor);
   transition: background-color 0.3s;
 }
 
-.pointer:hover{
+.pointer:hover {
   cursor: pointer;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.text-color{
+.text-color {
   color: var(--textColor);
+}
+
+.item-background-color {
+  background-color: var(--itemBackgroundColor);
+}
+
+.item-text-color {
+  color: var(--itemTextColor);
 }

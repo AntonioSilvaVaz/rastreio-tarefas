@@ -1,0 +1,24 @@
+.show-create-task {
+  position: absolute;
+  border: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 70px;
+  border-radius: 0 10px 0 0;
+  transition: background-color 0.3s;
+}
+
+.create-task {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+}

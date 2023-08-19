@@ -1,8 +1,8 @@
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { changeColor } from "../utilities/color";
 import './TopBar.css'
-export function TopBar() {
 
+export function TopBar() {
   return (
     <section id="topbar">
       <div>
