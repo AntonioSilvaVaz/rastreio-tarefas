@@ -12,9 +12,13 @@ export const counterSlice = createSlice({
     },
     deleteTask: (state, action: PayloadAction<string>) => {
       state.tasks = state.tasks.filter(task => task.taskId !== action.payload);
+    },
+    markAsSomething: (state, action: PayloadAction<{completed: boolean, taskId: string}>) =>{
+      const task = state.tasks.filter(task => task.taskId === action.payload.taskId)[0];
+      task.completed = action.payload.completed;
     }
   }
 });
 
-export const { createNewTask, deleteTask } = counterSlice.actions;
+export const { createNewTask, deleteTask, markAsSomething } = counterSlice.actions;
 export default counterSlice.reducer;
