@@ -25,23 +25,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   background-color: rgba(147, 228, 147, 0.53);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
 .task-card .button-container {
   transition: all 0.5s;
   position: absolute;
-  z-index: 3;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-
 
 .hide{
   opacity: 0;
@@ -59,7 +55,7 @@
   background-color: rgb(72, 1, 1);
 }
 
-.trash:hover {
+.button-container .trash:hover {
   color: white;
   background-color: rgb(149, 2, 2);
 }
@@ -70,13 +66,13 @@
   background-color: rgb(179, 177, 177);
 }
 
-.button-container .icon{
-  font-size: 20px;
-}
-
-.completed:hover {
+.button-container .completed:hover {
   background-color: rgb(111, 110, 110);
   color: rgb(255, 255, 255);
+}
+
+.button-container .icon{
+  font-size: 20px;
 }
 
 .button-container button {

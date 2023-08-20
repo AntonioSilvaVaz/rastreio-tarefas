@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createNewTask } from '../redux/task';
+import { AiOutlineClose } from 'react-icons/ai';
 import './CreateTask.css';
 
 export function CreateTask() {
@@ -28,10 +29,13 @@ export function CreateTask() {
         showCreateTask &&
         <>
           <div onClick={() => setShowCreateTask(false)} className='softBackground background-color'></div>
+
           <div className='create-task item-text-color item-background-color'>
             <div className='title-btn-container'>
               <h2>Cria um nova tarefa</h2>
-              <button onClick={() => setShowCreateTask(false)} className='close-btn pointer item-text-color'>X</button>
+              <button onClick={() => setShowCreateTask(false)} className='close-btn pointer item-text-color'>
+                <AiOutlineClose />
+              </button>
             </div>
             <form onSubmit={createTask} className='input-container'>
               <div>
@@ -46,10 +50,10 @@ export function CreateTask() {
                 <label htmlFor="date"><h4>Data</h4></label>
                 <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} name='date' />
               </div>
-
               <button className='background-color text-color pointer' type="submit">Criar tarefa</button>
             </form>
           </div>
+
         </>
       }
 

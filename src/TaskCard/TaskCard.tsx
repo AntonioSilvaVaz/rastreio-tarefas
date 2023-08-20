@@ -1,12 +1,11 @@
-import { TaskType } from '../types/types';
-import { BsFillTrashFill } from 'react-icons/bs';
-import { VscError } from 'react-icons/vsc';
-import { AiOutlineCheckCircle } from 'react-icons/ai';
-
 import { useState } from 'react';
-import './TaskCard.css';
 import { useDispatch } from 'react-redux';
 import { deleteTask, markAsSomething } from '../redux/task';
+import { TaskType } from '../types/types';
+import { BsFillTrashFill } from 'react-icons/bs';
+import { AiOutlineCheckCircle } from 'react-icons/ai';
+import { VscError } from 'react-icons/vsc';
+import './TaskCard.css';
 
 export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
 
@@ -40,8 +39,8 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
         <div className={`button-container ${buttonState}`}>
           <button className='completed pointer' onClick={markSomething}>
             {completed ?
-              <VscError className='icon'/> :
-              <AiOutlineCheckCircle className='icon'/>
+              <VscError className='icon' /> :
+              <AiOutlineCheckCircle className='icon' />
             }
           </button>
           <button className='trash pointer' onClick={deleteThisTask}>
