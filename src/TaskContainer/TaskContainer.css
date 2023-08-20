@@ -1,5 +1,10 @@
 #task-container{
+  max-width: 100%;
+  height: max-content;
   display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
   padding: 15px;
   gap: 20px;
   flex-wrap: wrap;

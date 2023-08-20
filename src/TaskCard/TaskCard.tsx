@@ -23,17 +23,17 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
   };
 
   return (
-    <div className='task-car-container pointer'
+    <div className='task-card-container item-background-color pointer'
       onMouseOver={() => setButtonState('show')}
       onMouseLeave={() => setButtonState('hide')}
     >
       {
         completed &&
         <div className='task-completed'>
-          <h2>Completo</h2>
+          <h2 className='item-text-color'>Completo</h2>
         </div>
       }
-      <div className="task-card item-background-color item-text-color">
+      <div className="task-card item-text-color">
         <h3 className='title'>{title}</h3>
         <p>{note}</p>
         <h4 className='date'>{date}</h4>
