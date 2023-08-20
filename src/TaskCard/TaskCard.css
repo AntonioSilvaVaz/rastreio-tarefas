@@ -1,7 +1,62 @@
-.task-card{
+.task-card {
   position: relative;
   width: 200px;
   height: 200px;
-  padding: 25px;
   border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.task-card:hover{
+  cursor: grab;
+}
+
+.task-card .button-container {
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 50px; */
+}
+
+
+.hide{
+  height: 0;
+}
+
+.show{
+  height: 50px;
+}
+
+.button-container .trash {
+  transition: background-color 0.3s;
+  color: rgb(236, 231, 231);
+  background-color: rgb(72, 1, 1);
+}
+
+.trash:hover {
+  color: white;
+  background-color: rgb(149, 2, 2);
+}
+
+.button-container .completed {
+  transition: background-color 0.3s;
+  color: black;
+  background-color: rgb(179, 177, 177);
+}
+
+.completed:hover {
+  background-color: rgb(111, 110, 110);
+  color: rgb(255, 255, 255);
+}
+
+.button-container button {
+  background-color: transparent;
+  font-size: 20px;
+  width: 50%;
+  padding: 15px;
+  border: 0;
 }
