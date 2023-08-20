@@ -12,10 +12,8 @@ export function CreateTask() {
 
   const dispatch = useDispatch();
 
-
   function createTask(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
     const taskId = crypto.randomUUID();
     dispatch(createNewTask({ title, note, date, completed: false, taskId }));
     setTitle('');

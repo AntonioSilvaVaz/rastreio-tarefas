@@ -10,8 +10,11 @@ export const counterSlice = createSlice({
     createNewTask: (state, action: PayloadAction<TaskType>) => {
       state.tasks.push(action.payload);
     },
+    deleteTask: (state, action: PayloadAction<string>) => {
+      state.tasks = state.tasks.filter(task => task.taskId !== action.payload);
+    }
   }
 });
 
-export const { createNewTask } = counterSlice.actions;
+export const { createNewTask, deleteTask } = counterSlice.actions;
 export default counterSlice.reducer;
