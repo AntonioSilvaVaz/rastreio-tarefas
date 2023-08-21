@@ -48,12 +48,22 @@ export const counterSlice = createSlice({
     showUncompletedTasks: (state) => {
       state.tasks = filterUncompletedTasks(state.allTasks);
       activeFilter = filterUncompletedTasks;
-    }
+    },
+    moveTaskPosition: (state, action: PayloadAction<{ taskId: string, direction: number }>) => {
+      const {taskId, direction} = action.payload;
+      const currIndex = state.allTasks.findIndex((task) => task.taskId == taskId);
+      const copyArr = [...state.allTasks];
+
+      [copyArr[currIndex], copyArr[currIndex + direction]] = [copyArr[currIndex + direction], copyArr[currIndex]];
+      state.allTasks = copyArr;
+      state.tasks = activeFilter(state.allTasks);
+    },
   }
 });
 
 export const {
   createNewTask, deleteTask, markAsSomething,
-  showAllTasks, showCompletedTasks, showUncompletedTasks
+  showAllTasks, showCompletedTasks, showUncompletedTasks,
+  moveTaskPosition,
 } = counterSlice.actions;
 export default counterSlice.reducer;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTask, markAsSomething } from '../redux/task';
+import { deleteTask, markAsSomething, moveTaskPosition } from '../redux/task';
 import { TaskType } from '../types/types';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
@@ -18,8 +18,12 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
 
   function markSomething() {
     // Will mark this task as completed if uncompleted and completed if uncompleted
-    dispatch(markAsSomething({ completed: !completed, taskId }))
+    dispatch(markAsSomething({ completed: !completed, taskId }));
   };
+
+  function moveElement() {
+    dispatch(moveTaskPosition({ taskId, direction: +1 }));
+  }
 
   return (
     <div className='task-card-container item-background-color pointer'
@@ -47,6 +51,7 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
             <BsFillTrashFill className='icon' />
           </button>
         </div>
+        <button onClick={moveElement}>Move test</button>
       </div>
     </div>
   )

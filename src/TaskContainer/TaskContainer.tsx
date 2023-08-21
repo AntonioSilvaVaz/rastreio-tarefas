@@ -5,13 +5,12 @@ import { TaskType } from '../types/types';
 
 export function TaskContainer() {
 
-  const { tasks, allTasks }: { tasks: TaskType[], allTasks: TaskType[] } = useSelector(((state: any) => state.tasks));
-  const tasksShow = tasks;
+  const { tasks }: { tasks: TaskType[] } = useSelector(((state: any) => state.tasks));
 
   return (
     <div id="task-container">
       {
-        tasksShow.map(({ title, note, date, taskId, completed }) => {
+        tasks.map(({ title, note, date, taskId, completed }) => {
           return (
             <TaskCard title={title} note={note} date={date} taskId={taskId} completed={completed} key={taskId} />
           )
