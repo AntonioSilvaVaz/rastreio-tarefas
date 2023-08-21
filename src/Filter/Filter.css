@@ -1,0 +1,41 @@
+#filter-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#filter-container fieldset{
+  border-top: none;
+  width: 100px;
+  height: 30px;
+  padding: 15px 20px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#filter-container .input-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type=radio]{
+  width: 15px;
+  height: 15px;
+  transition: all 0.1s;
+  appearance: none;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+input[type=radio]:checked{
+  background-color: white;
+  width: 20px;
+  height: 20px;
+}
