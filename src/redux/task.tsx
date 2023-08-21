@@ -54,6 +54,7 @@ export const counterSlice = createSlice({
       const currIndex = state.allTasks.findIndex((task) => task.taskId == taskId);
       const copyArr = [...state.allTasks];
 
+      if(currIndex + direction < 0 || currIndex + direction > copyArr.length - 1) return;
       [copyArr[currIndex], copyArr[currIndex + direction]] = [copyArr[currIndex + direction], copyArr[currIndex]];
       state.allTasks = copyArr;
       state.tasks = activeFilter(state.allTasks);

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, DragEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteTask, markAsSomething, moveTaskPosition } from '../redux/task';
 import { TaskType } from '../types/types';
@@ -10,6 +10,9 @@ import './TaskCard.css';
 export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
 
   const [buttonState, setButtonState] = useState<'show' | 'hide'>('hide');
+  let startPosition = 0;
+  let endPosition = 0;
+
   const dispatch = useDispatch();
 
   function deleteThisTask() {
@@ -21,14 +24,26 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
     dispatch(markAsSomething({ completed: !completed, taskId }));
   };
 
-  function moveElement() {
-    dispatch(moveTaskPosition({ taskId, direction: +1 }));
-  }
+  function moveElement(e: DragEvent<HTMLDivElement>) {
+    endPosition = e.clientX;
+    if (endPosition > startPosition) {
+      dispatch(moveTaskPosition({ taskId, direction: +1 }));
+    } else {
+      dispatch(moveTaskPosition({ taskId, direction: -1 }));
+    }
+  };
+
+  function moveTaskCard(e: DragEvent<HTMLDivElement>) {
+    startPosition = e.clientX;
+  };
 
   return (
     <div className='task-card-container item-background-color pointer'
+      draggable
       onMouseOver={() => setButtonState('show')}
       onMouseLeave={() => setButtonState('hide')}
+      onDragStart={moveTaskCard}
+      onDragEnd={moveElement}
     >
       {
         completed &&
@@ -51,7 +66,6 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
             <BsFillTrashFill className='icon' />
           </button>
         </div>
-        <button onClick={moveElement}>Move test</button>
       </div>
     </div>
   )
