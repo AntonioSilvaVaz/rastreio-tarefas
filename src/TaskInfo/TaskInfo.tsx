@@ -1,6 +1,7 @@
 import { useState, FormEvent, SetStateAction } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import './TaskInfo.css';
+import { getDatetimeLocalNow } from '../utilities/date';
 
 export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDescription, taskDate, taskNote, taskTitle }:
   {
@@ -10,7 +11,9 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
 
   const [title, setTitle] = useState<string>(taskTitle ? taskTitle : '');
   const [note, setNote] = useState<string>(taskNote ? taskNote : '');
-  const [date, setDate] = useState<string>(taskDate ? taskDate : '');
+  const [date, setDate] = useState<string>(taskDate ? taskDate : getDatetimeLocalNow());
+
+  console.log(date, 'THIS IS THE DATE YOU GET');
 
   function runOnSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -42,7 +45,8 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
           </div>
           <div>
             <label htmlFor="date"><h4>Data</h4></label>
-            <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} name='date' />
+            <input type="datetime-local" placeholder='dd-mm-yyyy'
+              value={date} min={getDatetimeLocalNow()} onChange={(e) => setDate(e.target.value)} name='date' />
           </div>
           <button className='pointer third-background-color second-text-color' type="submit">
             <h4>{buttonDescription}</h4>

@@ -7,6 +7,7 @@ import { AiOutlineCheckCircle, AiOutlineEdit } from 'react-icons/ai';
 import { VscError } from 'react-icons/vsc';
 import './TaskCard.css';
 import { TaskInfo } from '../TaskInfo/TaskInfo';
+import { prettifyDate } from '../utilities/date';
 
 export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
 
@@ -86,7 +87,7 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
             </button>
           </div>
           <p className='note'>{note}</p>
-          <h4 className='date'>{date}</h4>
+          <h4 className='date'>{prettifyDate(date)}</h4>
           <div className={`button-container ${buttonState}`}>
             <button className='completed pointer' onClick={markSomething}>
               {completed ?
