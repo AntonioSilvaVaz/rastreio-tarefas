@@ -13,8 +13,6 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
   const [note, setNote] = useState<string>(taskNote ? taskNote : '');
   const [date, setDate] = useState<string>(taskDate ? taskDate : getDatetimeLocalNow());
 
-  console.log(date, 'THIS IS THE DATE YOU GET');
-
   function runOnSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     functionRun(title, note, date);
@@ -36,17 +34,17 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
         </div>
         <form onSubmit={runOnSubmit} className='input-container'>
           <div>
-            <label htmlFor="title"><h4>Título</h4></label>
-            <input type="text" maxLength={20} onChange={(e) => setTitle(e.target.value)} value={title} name="title" />
+            <label htmlFor="title"><h4>Título *</h4></label>
+            <input required type="text" maxLength={20} onChange={(e) => setTitle(e.target.value)} value={title} name="title" />
           </div>
           <div>
-            <label htmlFor="note"><h4>Nota</h4></label>
+            <label htmlFor="note"><h4>Nota (opcional)</h4></label>
             <textarea className='textarea' maxLength={150} onChange={(e) => setNote(e.target.value)} value={note} name="note"></textarea>
           </div>
           <div>
-            <label htmlFor="date"><h4>Data</h4></label>
+            <label htmlFor="date"><h4>Data *</h4></label>
             <input type="datetime-local" placeholder='dd-mm-yyyy'
-              value={date} min={getDatetimeLocalNow()} onChange={(e) => setDate(e.target.value)} name='date' />
+              required value={date} min={getDatetimeLocalNow()} onChange={(e) => setDate(e.target.value)} name='date' />
           </div>
           <button className='pointer third-background-color second-text-color' type="submit">
             <h4>{buttonDescription}</h4>

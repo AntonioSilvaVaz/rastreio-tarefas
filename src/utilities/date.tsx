@@ -13,7 +13,5 @@ export function getDatetimeLocalNow(): string {
   const day = dateTime.getDate();
   const month = dateTime.getMonth() + 1;
   const year = dateTime.getFullYear();
-  const hour = dateTime.getHours();
-  const minutes = dateTime.getMinutes();
-  return `${year}-${month > 9 ? month : '0' + month}-${day > 9 ? day : '0' + day}T${hour > 9 ? hour : '0' + hour}:${minutes > 9 ? minutes : '0' + minutes}`;
+  return `${year}-${month > 9 ? month : '0' + month}-${day > 9 ? day : '0' + day}T00:00`;
 }
