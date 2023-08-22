@@ -40,7 +40,8 @@
 .task-card .edit-btn {
   position: relative;
   padding: 10px 0 10px 10px;
-  font-size: 15px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
   background-color: transparent;
   border: 0;
 }
@@ -55,10 +56,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(147, 228, 147, 0.53);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(92, 92, 92, 0.834);
+  color: white;
 }
 
 .task-card .button-container {

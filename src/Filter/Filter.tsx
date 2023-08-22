@@ -9,7 +9,7 @@ export function Filter() {
   return (
     <div id="filter-container" className='text-color'>
 
-      <fieldset>
+      <fieldset className='second-background-color'>
         <div className='input-container'>
           <label htmlFor="all"><h4>Tudo</h4></label>
           <input onChange={() => dispatch(showAllTasks())} type="radio" id='all' name='test' defaultChecked />

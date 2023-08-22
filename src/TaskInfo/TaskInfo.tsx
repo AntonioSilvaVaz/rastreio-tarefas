@@ -22,12 +22,12 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
 
   return (
     <>
-      <div onClick={() => setShowCreateTask(false)} className='softBackground background-color'></div>
+      <div onClick={() => setShowCreateTask(false)} className='softBackground second-background-color'></div>
 
-      <div className='create-task item-text-color item-background-color'>
+      <div className='create-task text-color main-background-color box-shadow'>
         <div className='title-btn-container'>
           <h2>{pageTitle}</h2>
-          <button onClick={() => setShowCreateTask(false)} className='close-btn pointer item-text-color'>
+          <button onClick={() => setShowCreateTask(false)} className='close-btn pointer text-color'>
             <AiOutlineClose />
           </button>
         </div>
@@ -44,7 +44,7 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
             <label htmlFor="date"><h4>Data</h4></label>
             <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} name='date' />
           </div>
-          <button className='background-color text-color pointer' type="submit">
+          <button className='pointer third-background-color second-text-color' type="submit">
             <h4>{buttonDescription}</h4>
           </button>
         </form>

@@ -4,7 +4,7 @@ import './TopBar.css'
 
 export function TopBar() {
   return (
-    <section id="topbar">
+    <section id="topbar" className="second-background-color box-shadow">
       <div>
         <h1 className="text-color">Rastreio de Tarefas</h1>
       </div>

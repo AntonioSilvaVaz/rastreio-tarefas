@@ -1,8 +1,10 @@
 :root {
-  --backgroundColor: black;
-  --textColor: white;
-  --itemBackgroundColor: white;
-  --itemTextColor: black;
+  --textColor: #FFFFFF;
+  --secondTextColor: #000000;
+  --mainBackgroundColor: #000000;
+  --secondBackgroundColor: #252525;
+  --thirdBackgroundColor: #FFFFFF;
+  --boxShadow: #FFFFFF;
 }
 
 html,
@@ -13,7 +15,7 @@ body,
 }
 
 body {
-  background-color: var(--backgroundColor);
+  background-color: var(--mainBackgroundColor);
   transition: background-color 0.3s;
 }
 
@@ -67,14 +69,22 @@ textarea{
   color: var(--textColor);
 }
 
-.background-color {
-  background-color: var(--backgroundColor);
+.second-text-color{
+  color: var(--secondTextColor);
 }
 
-.item-background-color {
-  background-color: var(--itemBackgroundColor);
+.main-background-color {
+  background-color: var(--mainBackgroundColor);
 }
 
-.item-text-color {
-  color: var(--itemTextColor);
+.second-background-color {
+  background-color: var(--secondBackgroundColor);
+}
+
+.third-background-color{
+  background-color: var(--thirdBackgroundColor);
+}
+
+.box-shadow {
+  box-shadow: 0 0 5px var(--boxShadow);
 }

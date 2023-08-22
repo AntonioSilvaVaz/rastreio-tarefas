@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <TopBar />
-      <hr className='text-color' />
       <Filter />
       <TaskContainer />
       <CreateTask />

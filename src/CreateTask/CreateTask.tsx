@@ -25,8 +25,8 @@ export function CreateTask() {
         />
       }
 
-      <button onClick={() => setShowCreateTask(true)} className='show-create-task item-background-color pointer'>
-        <h3 className='item-text-color'>Criar Tarefa</h3>
+      <button onClick={() => setShowCreateTask(true)} className='show-create-task second-background-color box-shadow pointer'>
+        <h3 className='text-color'>Criar Tarefa</h3>
       </button>
     </>
   )

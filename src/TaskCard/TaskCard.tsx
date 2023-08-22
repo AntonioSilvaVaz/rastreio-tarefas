@@ -64,7 +64,7 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
           taskDate={date} taskNote={note} taskTitle={title}
         />
       }
-      <div className='task-card-container item-background-color pointer'
+      <div className='task-card-container text-color main-background-color box-shadow pointer'
         draggable
         onMouseOver={() => setButtonState('show')}
         onMouseLeave={() => setButtonState('hide')}
@@ -75,13 +75,13 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
           // it will display on top of our task once completed
           completed &&
           <div className='task-completed'>
-            <h2 className='item-text-color'>Completo</h2>
+            <h2>Completo</h2>
           </div>
         }
-        <div className="task-card item-text-color">
+        <div className="task-card">
           <div className='title-edit-container'>
             <h3 className='title'>{title}</h3>
-            <button onClick={() => setShowEditTask(true)} className='edit-btn pointer'>
+            <button onClick={() => setShowEditTask(true)} className='edit-btn pointer text-color'>
               <AiOutlineEdit />
             </button>
           </div>
