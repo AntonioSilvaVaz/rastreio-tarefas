@@ -1,4 +1,4 @@
-.task-card-container{
+.task-card-container {
   position: relative;
   width: 200px;
   height: 200px;
@@ -8,18 +8,33 @@
 }
 
 .task-card {
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  justify-content: center;
 }
 
-.task-card:hover{
+.title {
+  height: 30px;
+}
+
+.note{
+  width: 100%;
+  line-break: auto;
+  word-break: break-all;
+  height: 145px;
+}
+
+.date{
+  width: 100%;
+  height: 20px;
+}
+
+.task-card:hover {
   cursor: grab;
 }
 
-.task-card .edit-btn{
+.task-card .edit-btn {
   position: absolute;
   padding: 10px;
   font-size: 15px;
@@ -29,7 +44,7 @@
   border: 0;
 }
 
-.task-completed{
+.task-completed {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,12 +64,12 @@
   width: 100%;
 }
 
-.hide{
+.hide {
   opacity: 0;
   height: 0;
 }
 
-.show{
+.show {
   opacity: 1;
   height: 50px;
 }
@@ -81,7 +96,7 @@
   color: rgb(255, 255, 255);
 }
 
-.button-container .icon{
+.button-container .icon {
   font-size: 20px;
 }
 

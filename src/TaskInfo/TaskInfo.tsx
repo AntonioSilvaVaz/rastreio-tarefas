@@ -34,11 +34,11 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
         <form onSubmit={runOnSubmit} className='input-container'>
           <div>
             <label htmlFor="title"><h4>Título</h4></label>
-            <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} name="title" />
+            <input type="text" maxLength={20} onChange={(e) => setTitle(e.target.value)} value={title} name="title" />
           </div>
           <div>
             <label htmlFor="note"><h4>Nota</h4></label>
-            <textarea className='textarea' onChange={(e) => setNote(e.target.value)} value={note} name="note"></textarea>
+            <textarea className='textarea' maxLength={150} onChange={(e) => setNote(e.target.value)} value={note} name="note"></textarea>
           </div>
           <div>
             <label htmlFor="date"><h4>Data</h4></label>

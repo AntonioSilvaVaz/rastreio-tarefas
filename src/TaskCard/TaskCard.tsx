@@ -41,13 +41,15 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
   };
 
   function editTask(title: string, note: string, date: string) {
-    dispatch(updateTask({title, note, date, taskId}));
+    dispatch(updateTask({ title, note, date, taskId }));
     setShowEditTask(false);
   };
 
   return (
     <>
-      {showEditTask &&
+      {
+        // will display the edit menu for the selected task
+        showEditTask &&
         <TaskInfo buttonDescription='Update Task' pageTitle='Update this task'
           setShowCreateTask={setShowEditTask} functionRun={editTask}
           taskDate={date} taskNote={note} taskTitle={title}
@@ -61,6 +63,7 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
         onDragEnd={moveElement}
       >
         {
+          // it will display on top of our task once completed
           completed &&
           <div className='task-completed'>
             <h2 className='item-text-color'>Completo</h2>
@@ -71,7 +74,7 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
             <AiOutlineEdit />
           </button>
           <h3 className='title'>{title}</h3>
-          <p>{note}</p>
+          <p className='note'>{note}</p>
           <h4 className='date'>{date}</h4>
           <div className={`button-container ${buttonState}`}>
             <button className='completed pointer' onClick={markSomething}>
