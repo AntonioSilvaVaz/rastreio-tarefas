@@ -19,6 +19,16 @@
   cursor: grab;
 }
 
+.task-card .edit-btn{
+  position: absolute;
+  padding: 10px;
+  font-size: 15px;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+}
+
 .task-completed{
   position: absolute;
   top: 0;

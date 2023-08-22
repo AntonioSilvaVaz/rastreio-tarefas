@@ -59,12 +59,20 @@ export const counterSlice = createSlice({
       state.allTasks = copyArr;
       state.tasks = activeFilter(state.allTasks);
     },
+    updateTask: (state, action: PayloadAction<{taskId: string, title: string, note: string, date: string}>) =>{
+      const {taskId, title, note, date} = action.payload;
+      let task = state.allTasks.filter(task => task.taskId === taskId)[0];
+      task.title = title;
+      task.note = note;
+      task.date = date;
+      state.tasks = activeFilter(state.allTasks);
+    },
   }
 });
 
 export const {
   createNewTask, deleteTask, markAsSomething,
   showAllTasks, showCompletedTasks, showUncompletedTasks,
-  moveTaskPosition,
+  moveTaskPosition, updateTask
 } = counterSlice.actions;
 export default counterSlice.reducer;
