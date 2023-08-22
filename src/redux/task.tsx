@@ -60,9 +60,11 @@ export const counterSlice = createSlice({
       const copyArr = [...state.allTasks];
 
       if (currIndex + direction < 0 || currIndex + direction > copyArr.length - 1) return;
+
       [copyArr[currIndex], copyArr[currIndex + direction]] = [copyArr[currIndex + direction], copyArr[currIndex]];
       state.allTasks = copyArr;
       state.tasks = activeFilter(state.allTasks);
+
       localStorage.setItem('tasks', JSON.stringify(state.allTasks));
     },
     updateTask: (state, action: PayloadAction<{ taskId: string, title: string, note: string, date: string }>) => {

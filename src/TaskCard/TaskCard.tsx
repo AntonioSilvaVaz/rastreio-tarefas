@@ -29,11 +29,20 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
 
   function moveElement(e: DragEvent<HTMLDivElement>) {
     endPosition = e.clientX;
-    if (endPosition > startPosition) {
-      dispatch(moveTaskPosition({ taskId, direction: +1 }));
-    } else {
-      dispatch(moveTaskPosition({ taskId, direction: -1 }));
+
+    // the difference from the start mouse drag position and the end position
+    // how many tasks it as crossed (each task 240px width)
+    const difference = startPosition - endPosition;
+    let tasksPassed = Math.floor(difference / 240);
+
+    // check if it should move forwards or backwards
+    tasksPassed = difference > 0 ? -tasksPassed : Math.abs(tasksPassed + 1);
+
+
+    if (tasksPassed !== 0) {
+      dispatch(moveTaskPosition({ taskId, direction: tasksPassed }));
     }
+
   };
 
   function moveTaskCard(e: DragEvent<HTMLDivElement>) {
