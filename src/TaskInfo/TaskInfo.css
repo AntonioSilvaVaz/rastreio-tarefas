@@ -24,7 +24,7 @@
 .title-btn-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .close-btn {
@@ -37,13 +37,12 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .input-container div {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 input[type=text] {

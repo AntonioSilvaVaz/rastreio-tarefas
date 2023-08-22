@@ -11,17 +11,17 @@ export function Filter() {
 
       <fieldset>
         <div className='input-container'>
-          <label htmlFor="all">Tudo</label>
+          <label htmlFor="all"><h4>Tudo</h4></label>
           <input onChange={() => dispatch(showAllTasks())} type="radio" id='all' name='test' defaultChecked />
         </div>
 
         <div className='input-container'>
-          <label htmlFor="completed">Completo</label>
+          <label htmlFor="completed"><h4>Completo</h4></label>
           <input onChange={() => dispatch(showCompletedTasks())} type="radio" id='completed' name='test' />
         </div>
 
         <div className='input-container'>
-          <label htmlFor="notCompleted">Por completar</label>
+          <label htmlFor="notCompleted"><h4>Por completar</h4></label>
           <input type="radio" onChange={() => dispatch(showUncompletedTasks())} id='notCompleted' name='test' />
         </div>
       </fieldset>

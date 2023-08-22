@@ -70,10 +70,12 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
           </div>
         }
         <div className="task-card item-text-color">
-          <button onClick={() => setShowEditTask(true)} className='edit-btn pointer'>
-            <AiOutlineEdit />
-          </button>
-          <h3 className='title'>{title}</h3>
+          <div className='title-edit-container'>
+            <h3 className='title'>{title}</h3>
+            <button onClick={() => setShowEditTask(true)} className='edit-btn pointer'>
+              <AiOutlineEdit />
+            </button>
+          </div>
           <p className='note'>{note}</p>
           <h4 className='date'>{date}</h4>
           <div className={`button-container ${buttonState}`}>

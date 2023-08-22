@@ -44,7 +44,9 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
             <label htmlFor="date"><h4>Data</h4></label>
             <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} name='date' />
           </div>
-          <button className='background-color text-color pointer' type="submit">{buttonDescription}</button>
+          <button className='background-color text-color pointer' type="submit">
+            <h4>{buttonDescription}</h4>
+          </button>
         </form>
       </div>
 
