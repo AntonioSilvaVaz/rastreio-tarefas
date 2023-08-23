@@ -13,6 +13,10 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
   const [note, setNote] = useState<string>(taskNote ? taskNote : '');
   const [date, setDate] = useState<string>(taskDate ? taskDate : getDatetimeLocalNow());
 
+  // no need to useState here because the component will automatically rerender with the user typing in the title or note fields
+  let titleCounter = title.length;
+  let noteCounter = note.length;
+
   function runOnSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     functionRun(title, note, date);
@@ -36,10 +40,12 @@ export function TaskInfo({ setShowCreateTask, functionRun, pageTitle, buttonDesc
           <div>
             <label htmlFor="title"><h4>Título *</h4></label>
             <input required type="text" maxLength={20} onChange={(e) => setTitle(e.target.value)} value={title} name="title" />
+            <h5 className='counter'>{titleCounter} / 20</h5>
           </div>
           <div>
             <label htmlFor="note"><h4>Nota (opcional)</h4></label>
             <textarea className='textarea' maxLength={150} onChange={(e) => setNote(e.target.value)} value={note} name="note"></textarea>
+            <h5 className='counter'>{noteCounter} / 150</h5>
           </div>
           <div>
             <label htmlFor="date"><h4>Data *</h4></label>
