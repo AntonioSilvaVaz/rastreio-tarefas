@@ -14,6 +14,10 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
   const [buttonState, setButtonState] = useState<'show' | 'hide'>('hide');
   const [showEditTask, setShowEditTask] = useState<boolean>(false);
 
+  const dueDate = new Date(date).getTime();
+  const dateNow = new Date().getTime();
+  const pastDue = dueDate <= dateNow;
+
   let startPosition = 0;
   let endPosition = 0;
 
@@ -72,11 +76,19 @@ export function TaskCard({ title, note, date, taskId, completed }: TaskType) {
         onDragStart={moveTaskCard}
         onDragEnd={moveElement}
       >
+
         {
           // it will display on top of our task once completed
           completed &&
-          <div className='task-completed'>
+          <div className='task-top-element task-completed'>
             <h2>Completo</h2>
+          </div>
+        }
+        {
+          // it will display if not completed until the date selected
+          pastDue && !completed &&
+          <div className='task-top-element task-past-due'>
+            <h2>Past due</h2>
           </div>
         }
         <div className="task-card">

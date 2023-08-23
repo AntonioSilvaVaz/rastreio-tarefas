@@ -51,6 +51,16 @@
 }
 
 .task-completed {
+  background-color: rgba(92, 92, 92, 0.834);
+  color: white;
+}
+
+.task-past-due{
+  background-color: rgba(255, 0, 0, 0.522);
+  color: white;
+}
+
+.task-top-element{
   position: absolute;
   top: 0;
   left: 0;
@@ -59,8 +69,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(92, 92, 92, 0.834);
-  color: white;
 }
 
 .task-card .button-container {
