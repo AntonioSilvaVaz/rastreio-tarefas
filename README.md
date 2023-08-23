@@ -4,9 +4,9 @@ A nice task tracker that allows users to create, update, delete, complete and un
 
 ## Screenshots
 
-![example 1](https://github.com/AntonioSilvaVaz/shopping/blob/rastreio-tarefas/assets/gif1.gif)
-![example 2](https://github.com/AntonioSilvaVaz/shopping/blob/rastreio-tarefas/assets/gif2.gif)
-![example 3](https://github.com/AntonioSilvaVaz/shopping/blob/rastreio-tarefas/assets/gif3.gif)
+![example 1](https://github.com/AntonioSilvaVaz/rastreio-tarefas/blob/main/assets/gif1.gif)
+![example 2](https://github.com/AntonioSilvaVaz/rastreio-tarefas/blob/main/assets/gif2.gif)
+![example 3](https://github.com/AntonioSilvaVaz/rastreio-tarefas/blob/main/assets/gif3.gif)
 
 
 ## Stack
