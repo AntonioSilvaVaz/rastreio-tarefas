@@ -1,4 +1,4 @@
-import { useState, DragEvent, FormEvent } from 'react';
+import { useState, DragEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteTask, markAsSomething, moveTaskPosition, updateTask } from '../redux/task';
 import { TaskType } from '../types/types';
