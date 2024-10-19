@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rastreio-tarefas/static/css/main.faab26e4.css",
-    "main.js": "/rastreio-tarefas/static/js/main.bc2b5e81.js",
-    "static/js/787.2b160e93.chunk.js": "/rastreio-tarefas/static/js/787.2b160e93.chunk.js",
-    "index.html": "/rastreio-tarefas/index.html",
-    "main.faab26e4.css.map": "/rastreio-tarefas/static/css/main.faab26e4.css.map",
-    "main.bc2b5e81.js.map": "/rastreio-tarefas/static/js/main.bc2b5e81.js.map",
-    "787.2b160e93.chunk.js.map": "/rastreio-tarefas/static/js/787.2b160e93.chunk.js.map"
+    "main.css": "/static/css/main.faab26e4.css",
+    "main.js": "/static/js/main.6301b8df.js",
+    "static/js/787.2b160e93.chunk.js": "/static/js/787.2b160e93.chunk.js",
+    "index.html": "/index.html",
+    "main.faab26e4.css.map": "/static/css/main.faab26e4.css.map",
+    "main.6301b8df.js.map": "/static/js/main.6301b8df.js.map",
+    "787.2b160e93.chunk.js.map": "/static/js/787.2b160e93.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.faab26e4.css",
-    "static/js/main.bc2b5e81.js"
+    "static/js/main.6301b8df.js"
   ]
 }
